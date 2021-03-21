@@ -1,14 +1,13 @@
 package main
 
 import (
+	_ "go.mongodb.org/mongo-driver/bson"
+	_ "go.mongodb.org/mongo-driver/mongo"
+	_ "go.mongodb.org/mongo-driver/mongo/options"
+	_ "go.mongodb.org/mongo-driver/mongo/readpref"
 	"io"
 	"log"
 	"net/http"
-
-	"go.mongodb.org/mongo-driver/bson"
-	"go.mongodb.org/mongo-driver/mongo"
-	"go.mongodb.org/mongo-driver/mongo/options"
-	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
 func getResponse(w http.ResponseWriter, _ *http.Request) {
